@@ -6,12 +6,16 @@ pipeline {
     stages {
         stage('Build') {
             when {
-                not {
-                    branch 'main'
+                anyOf {
+                    not {
+                        branch 'main'
+                    }
+                    changeRequest()
                 }
             }
             steps {
                 echo 'Running build step on change request or branch (not on main)'
+				echo 'Here\'s another little change for us to use to validate'
             }
         }
     }
