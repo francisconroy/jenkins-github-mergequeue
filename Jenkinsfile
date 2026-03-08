@@ -6,8 +6,11 @@ pipeline {
     stages {
         stage('Build') {
             when {
-                not {
-                    branch 'main'
+                anyOf {
+                    not {
+                        branch 'main'
+                    }
+                    changeRequest
                 }
             }
             steps {
