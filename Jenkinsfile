@@ -10,7 +10,7 @@ pipeline {
                     not {
                         branch 'main'
                     }
-                    changeRequest
+                    changeRequest()
                 }
             }
             steps {
