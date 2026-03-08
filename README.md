@@ -10,3 +10,5 @@ The repository includes a `Jenkinsfile` that:
 - Includes a simple echo command for demonstration purposes
 
 The pipeline uses a `when` condition with `not { branch 'main' }` to ensure the build step only executes for non-main branches, making it suitable for CI validation before merging.
+
+Making a simple change to test Jenkins response
